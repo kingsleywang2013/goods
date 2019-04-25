@@ -1,5 +1,26 @@
 <div class="container goods">
   <h1>Goods List</h1>
+  <div class="row filter">
+    <%= form_tag goods_path, method: 'get', class: 'form-horizontal' do %>
+      <div class="form-group">
+        <%= label_tag :type, 'Type', class: 'col-sm-3 control-label' %>
+        <div class="col-sm-6">
+          <%= text_field_tag :type, params[:type], placeholder: 'Input your filter type', class: 'form-control' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= label_tag :entry_at, 'Arrive Date', class: 'col-sm-3 control-label' %>
+        <div class="col-sm-6">
+          <%= date_field_tag :entry_at, params[:entry_at], class: 'form-control' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Filter</button>
+        </div>
+      </div>
+    <% end %>
+  </div>
   <div class="row">
     <table class="table table-striped">
       <thead>
