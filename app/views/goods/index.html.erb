@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Goods List</h1>
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Consignment ID</th>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Entry At</th>
+          <th>Exit At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @goods.each do |good| %>
+          <tr>
+            <td><%= good.consignment_id %></td>
+            <td><%= good.type %></td>
+            <td><%= good.name %></td>
+            <td><%= good.source %></td>
+            <td><%= good.destination %></td>
+            <td><%= good.entry_at&.strftime('%d/%m/%Y') %></td>
+            <td><%= good.exit_at&.strftime('%d/%m/%Y') %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
