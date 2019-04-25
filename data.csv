@@ -1,0 +1,10 @@
+consignment_id,type,name,source,destination
+ABCD123,Food,Sugar,Australia/Melbourne,Australia/Sydney
+ABCD321,Plant,Lilies,Australia/Melbourne,Australia/Sydney
+ABCD123,Plant,Boquets,Australia/Melbourne,Australia/Sydney
+ABCD456,Food,Oil,Australia/Melbourne,Australia/Sydney
+ABCD789,Plant,Roses,Australia/Melbourne,Australia/Sydney
+DEFE412,Food,Fruit,Australia/Melbourne,Australia/Sydney
+ABCD123,Plant,Orchids,Australia/Melbourne,Australia/Sydney
+DEFE123,Food,Yoghurt,Australia/Melbourne,Australia/Sydney
+FECD123,Plant,Gladiolas,Australia/Melbourne,Australia/Sydney
