@@ -1,0 +1,29 @@
+<div class="container new-goods">
+  <h2>Import Data</h2>
+  <div class="alert alert-info">
+    <p>You must need to input 'consignment_id', 'name', 'type'.</p>
+    <p>Field 'name' should not unique.</p>
+  </div>
+  <% if @import.errors.any? %>
+    <div class="row">
+      <ul class="errors">
+        <% @import.errors.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row form">
+    <%= form_tag import_goods_path, multipart: true do %>
+      <div class="form-group">
+        <%= label_tag 'Upload file' %>
+        <%= file_field_tag :file, accept: 'text/csv' %>
+        <div class="form-buttons">
+          <%= submit_tag 'Import CSV', class: 'btn btn-primary' %>
+          <%= link_to 'Back', goods_path, class: 'btn btn-default' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
