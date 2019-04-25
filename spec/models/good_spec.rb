@@ -23,4 +23,9 @@ RSpec.describe Good, type: :model do
     good.update(type: nil)
     expect(good.invalid?).to eq true
   end
+
+  it 'name should be unique' do
+    good = Good.create(consignment_id: 'DP1001AP', name: 'Coconuts', type: 'Food')
+    expect(good.invalid?).to eq true
+  end
 end
