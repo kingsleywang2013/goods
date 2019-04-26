@@ -13,6 +13,9 @@ This is a code challenge
 * `docker-compose run --rm app bash`
 * `bundle exec rspec spec`
 
+### Test Data
+* There is a csv file called `data` could be used as test for importing
+
 ### Improvements
 * Could add gem `kaminari` to enable pagination
 * Could add gem `sidekiq` and database `redis` to enable import job to run at backend job
