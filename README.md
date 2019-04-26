@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a code challenge
 
-Things you may want to cover:
+### Configuration
+* Needs install `docker` and `docker-compose` in your machine
 
-* Ruby version
+### How to run app
+* Clone repo in your local
+* run command `docker-compose up`
 
-* System dependencies
+### How to run the test suite
+* `docker-compose run --rm app bash`
+* `bundle exec rspec spec`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Improvements
+* Could add gem `kaminari` to enable pagination
+* Could add gem `sidekiq` and database `redis` to enable import job to run at backend job
+* Could use any Frontend framework like Vue/React to make listing goods as a component
+* Could seperate import process into two steps. First step is validator and gave the validate report. Second step is dose import
+* Could use `Ajax` to enable filter instead of reloading page
